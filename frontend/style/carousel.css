@@ -1,0 +1,207 @@
+.carousel-container {
+    background-color: #E7E7E7;
+    padding: 20px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1384px;
+    margin:20px auto;
+}
+
+.carousel-container h1 {
+    font-size: 1.2rem;
+    color: #2770A0;
+    margin: 0;
+}
+
+.title-container {
+    display: flex;
+    align-items: center
+}
+
+.carousel-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.carousel-icon {
+    display: inline-block;
+    background-color: #2770A0;
+    color: #FFFFFF;
+    padding: 7px 12px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 1px;
+}
+
+.carousel-title {
+    color: #2770A0;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0
+}
+
+.carousel-subtitle {
+    color: #a0a0a0;
+    font-size: 14px;
+    margin: 0
+}
+
+.cards-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+    min-height: 300px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.key-previous {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    width: 40px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.key-previous.hidden {
+    display: flex !important;
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.key-next {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    width: 40px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.key-next.hidden {
+    display: flex !important;
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+
+.cards {
+    position: absolute;
+    left: 0;
+    display: flex;
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+}
+
+.card {
+    background-color: #FFFFFF;
+    margin: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card > img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.card-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #ddd;
+    background-size: cover;
+}
+
+.card-preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    background-size: cover;
+}
+
+.spinner {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.card-type {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .6);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-duration {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .6);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #2770A0;
+    height: 130px;
+}
+
+.card-language {
+    color: #999;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.card-collection {
+    text-align: center;
+    margin: -4px 4px;
+    height: 20px;
+}
+
+.card-collection > .othercard {
+    height: 3px;
+    margin: 1px auto;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.othercard-1 {
+    width: 98%;
+}
+
+.othercard-2 {
+    width: 94%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
