@@ -58,6 +58,10 @@ class Carousel {
     // FETCH CARD DATA FROM API
     buildCards(chunk = 1) {
         let first = 0;
+        let maxChunks = Math.ceil(this.totalCardsFromAPI / this.chunkSize);
+        if (chunk > maxChunks) {
+            chunk = 1;
+        }
         if (chunk > 1) {
             first = this.chunkSize * (chunk - 1);
             // RESET COUNTER WHEN END OF DATA IS REACHED (TO SIMULATE MORE DATA)
@@ -67,19 +71,13 @@ class Carousel {
         }
         this.fetchCards(this.chunkSize, first).then((data) => {
             this.totalCardsFromAPI = data.total;
-            if (data.cards && data.cards.length) {
-                let i = this.loadedCards;
-                this.loadedCards += data.cards.length;
+            let i = this.loadedCards;
+            this.loadedCards += data.cards.length;
 
-                data.cards.forEach(card => {
-                    this.showCardSkeleton(card, i);
-                    i++;
-                });
-            } else {
-                //this.hideKeys('next');
-                //this.prevCard(true);
-                //this.allCardsLoaded = true;
-            }
+            data.cards.forEach(card => {
+                this.showCardSkeleton(card, i);
+                i++;
+            });
         });
 
     }
