@@ -211,41 +211,89 @@ let data1 = [
 
 let data2 = [
   {
-    "image": "image1.jpg",
+    "image": "image14.jpg",
     "type": "video",
-    "title": "Welcome to effective time management",
+    "title": "Our best content #1",
     "duration": 77,
     "cardinality": "single",
     "language": null
   },
   {
-    "image": "image2.jpg",
+    "image": "image15.jpg",
     "type": "elearning",
-    "title": "Choosing the best audio playing software for your computer",
+    "title": "Our best content #2",
     "duration": 2520,
     "cardinality": "single",
     "language": "english"
   },
   {
-    "image": "image3.jpg",
+    "image": "image16.jpg",
     "type": "learning plan",
-    "title": "The small change that creates massive results in your life",
+    "title": "Our best content #3",
     "duration": 4800,
     "cardinality": "single",
     "language": null
   },
   {
-    "image": "image4.jpg",
+    "image": "image17.jpg",
     "type": "playlist",
-    "title": "Enhance your brand potential with giant advertising blimps",
+    "title": "Our best content #4",
     "duration": 4800,
     "cardinality": "collection",
     "language": null
   },
   {
-    "image": "image12.jpg",
+    "image": "image18.jpg",
     "type": "elearning",
-    "title": "This is slide #12",
+    "title": "Our best content #5",
+    "duration": null,
+    "cardinality": "single",
+    "language": "english"
+  },
+  {
+    "image": "image19.jpg",
+    "type": "elearning",
+    "title": "Our best content #6",
+    "duration": null,
+    "cardinality": "single",
+    "language": null
+  },
+  {
+    "image": "image20.jpg",
+    "type": "elearning",
+    "title": "Our best content #7",
+    "duration": null,
+    "cardinality": "single",
+    "language": "english"
+  },
+  {
+    "image": "image1.jpg",
+    "type": "elearning",
+    "title": "Our best content #8",
+    "duration": null,
+    "cardinality": "single",
+    "language": "english"
+  },
+  {
+    "image": "image4.jpg",
+    "type": "elearning",
+    "title": "Our best content #9",
+    "duration": null,
+    "cardinality": "single",
+    "language": "english"
+  },
+  {
+    "image": "image7.jpg",
+    "type": "elearning",
+    "title": "Our best content #10",
+    "duration": null,
+    "cardinality": "single",
+    "language": "english"
+  },
+  {
+    "image": "image11.jpg",
+    "type": "elearning",
+    "title": "Our best content #11",
     "duration": null,
     "cardinality": "single",
     "language": "english"
@@ -253,15 +301,7 @@ let data2 = [
   {
     "image": "image13.jpg",
     "type": "elearning",
-    "title": "This is slide #13... and so on...",
-    "duration": null,
-    "cardinality": "single",
-    "language": null
-  },
-  {
-    "image": "image10.jpg",
-    "type": "elearning",
-    "title": "This is slide #10",
+    "title": "Our best content #12",
     "duration": null,
     "cardinality": "single",
     "language": "english"

@@ -45,6 +45,9 @@ class Carousel {
         this.mainContainer.innerHTML += '<div class="cards-container"></div>';
         this.cardsContainer = this.mainContainer.querySelector('.cards-container');
         this.cardsWidth = this.cardsContainer.clientWidth / this.chunkSize;
+        if (this.cardsWidth < 200) {
+            this.cardsWidth = 200;
+        }
     }
 
     buildCardsScroller() {
@@ -73,9 +76,9 @@ class Carousel {
                     i++;
                 });
             } else {
-                this.hideKeys('next');
-                this.prevCard(true);
-                this.allCardsLoaded = true;
+                //this.hideKeys('next');
+                //this.prevCard(true);
+                //this.allCardsLoaded = true;
             }
         });
 
@@ -141,7 +144,7 @@ class Carousel {
 
     // SHOW ARROW BUTTONS
     showKeys() {
-        console.log(this.allCardsLoaded);
+        //console.log(this.allCardsLoaded);
         if (this.firstCard > 0) {
             this.prevButton.classList.remove('hidden');
         }
@@ -204,19 +207,10 @@ class Carousel {
     swipe(event) {
         let touch = event.touches[0];
         if (this.swiping) {
-            console.log(touch.clientX);
-
-            if (touch.clientX < this.startX - 50) {
-                if (this.firstCard + this.chunkSize + 1 <= this.fetchCards.length) {
-                    this.nextCard();
-                    this.swipeEnd();
-                } else {
-                    this.cardsScroller = this.cardsContainer.querySelector('.cards');
-                    let currentLeft = this.cardsScroller.style.left.replace('px', '');
-                    this.cardsScroller.style.left = currentLeft - this.cardsWidth + 'px';
-                    this.swipeEnd();
-                }
-            } else if (touch.clientX > this.startX + 50) {
+            if (touch.clientX < this.startX - 10) {
+                this.nextCard();
+                this.swipeEnd();
+            } else if (touch.clientX > this.startX + 10) {
                 if (this.firstCard > 0) {
                     this.prevCard();
                     this.swipeEnd();
