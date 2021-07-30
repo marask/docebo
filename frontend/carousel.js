@@ -58,16 +58,15 @@ class Carousel {
     // FETCH CARD DATA FROM API
     buildCards(chunk = 1) {
         let first = 0;
+        // Calculate max number of chunks
         let maxChunks = Math.ceil(this.totalCardsFromAPI / this.chunkSize);
+        // If max chunks reached, loop from first chunk
         if (chunk > maxChunks) {
             chunk = 1;
+            first = 0;
         }
         if (chunk > 1) {
             first = this.chunkSize * (chunk - 1);
-            // RESET COUNTER WHEN END OF DATA IS REACHED (TO SIMULATE MORE DATA)
-            if (first > this.totalCardsFromAPI) {
-                first = 0;
-            }
         }
         this.fetchCards(this.chunkSize, first).then((data) => {
             this.totalCardsFromAPI = data.total;
